@@ -1,0 +1,15 @@
+[
+    {
+      "Pattern": "Failed password",
+      "Tactic": "Credential Access",
+      "Technique": "Brute Force",
+      "MITRE ID": "T1110"
+    },
+    {
+      "Pattern": "Accepted password",
+      "Tactic": "Persistence",
+      "Technique": "Valid Accounts",
+      "MITRE ID": "T1078"
+    }
+  ]
+  

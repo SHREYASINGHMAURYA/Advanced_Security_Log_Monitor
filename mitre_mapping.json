@@ -1,0 +1,5 @@
+{
+    "T1110": "Credential Access",
+    "T1059": "Execution",
+    "T1068": "Privilege Escalation"
+  }  

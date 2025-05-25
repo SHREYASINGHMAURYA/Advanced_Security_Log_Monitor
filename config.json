@@ -1,0 +1,4 @@
+{
+    "log_file": "logs/auth.log",
+    "detection_rules": "logs/detections.json"
+  }  

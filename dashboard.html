@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Monitoring Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e1e2f;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #ff5252;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: #2a2a40;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #444;
+            text-align: left;
+        }
+        th {
+            background: #444;
+        }
+        tr:nth-child(even) {
+            background: #333;
+        }
+        .status-ok {
+            color: #4caf50;
+        }
+        .status-alert {
+            color: #ff5252;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚨 Security Monitoring Dashboard 🚨</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>IP</th>
+                <th>Location</th>
+                <th>Tactic</th>
+                <th>Technique</th>
+                <th>MITRE ID</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for detection in detections %}
+            <tr>
+                <td>{{ detection["time"] }}</td>
+                <td>{{ detection["ip"] }}</td>
+                <td>{{ detection["ip_info"] }}</td>
+                <td>{{ detection["event"]["Tactic"] }}</td>
+                <td>{{ detection["event"]["Technique"] }}</td>
+                <td>{{ detection["event"]["MITRE ID"] }}</td>
+                <td class="status-alert">Alert</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
